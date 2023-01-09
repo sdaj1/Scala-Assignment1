@@ -1,0 +1,16 @@
+.bsp
+.idea
+.settings
+_
+bin
+logs
+sbt-dist
+scripts
+target
+test
+.classpath
+ITT-Employee-Play
+LICENSE
+NOTICE
+sbt
+sbt

@@ -1,0 +1,20 @@
+@(messages: Seq[String])
+
+<html>
+    <head>
+        <title>Print List Item</title>
+    </head>
+    <body>
+        <form>
+        <p1>List of the Employee who is Eligible for Accommodate and Promotion</p1><br/>
+        </form>
+
+        <div class="center-pill">
+                @for(x <- messages){
+                    <li>@x</li><br/>
+                }
+        </div>
+
+
+    </body>
+</html>

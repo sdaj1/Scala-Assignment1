@@ -1,0 +1,19 @@
+@()(implicit assetsFinder: AssetsFinder)
+@main("Add Employee Page"){
+    <div id="content" class="wrapper doc">
+        <p1>Note</p1>
+        <p>For Board of Director Department Enter => 1</p>
+        <p>For Engineering Department Enter => 2</p>
+        <p>For Operation Department Enter => 3</p>
+        <p>For Service Department Enter => 4</p>
+        <form method="get" action="/addEmployeeForm">
+            <label for="name">Enter Employee Name</label><br/>
+            <input type="text" id="name" name="name"><br/>
+            <label for="age">Enter Employee Age</label><br/>
+            <input type="text" id="age" name="age"><br/>
+            <label for="dept">Enter Employee Department Number</label><br/>
+            <input type="text" id="dept" name="dept"><br/><br/>
+            <input type="submit" value="Add Employee"><br/>
+        </form>
+    </div>
+}

@@ -1,0 +1,90 @@
+@(message: String, style: String = "scala") 
+
+
+<section id="top">
+  <div class="wrapper">
+    <h1>@message</h1>
+  </div>
+</section>
+
+<div id="content" class="wrapper doc">
+<article>
+
+  <h1>Welcome to In-Time-Tec</h1>
+
+  <p>
+    Congratulations, you’ve just created a new Play application. This page will help you with the next few steps.
+  </p>
+    <p>
+        Fined the In Time Tec details below....................................................
+    </p>
+</article>
+</div>
+<div id="content" class="wrapper doc">
+<p1>Note*</p1>
+<p>For Board of Director Department Enter => 1</p>
+<p>For Engineering Department Enter => 2</p>
+<p>For Operation Department Enter => 3</p>
+<p>For Service Department Enter => 4</p>
+</div>
+<div id="content" class="wrapper doc">
+  <p>Click the below Button For Adding and Geting Information</p>
+
+  @* This form is for Adding Employee *@
+  <form method="get" action="/Add-Employee">
+    <input type="submit" value="Add Employee">
+  </form><br/>
+
+  @* This form is for find Elder Employee from Department *@
+  <form method="get" action="/Get-Elder-Emp">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Get Elder Employee">
+  </form><br/>
+
+  @* This form is for find Younger Employee from Department *@
+  <form method="get" action="/Get-Younger-Emp">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Get Younger Employee">
+  </form><br/>
+
+  @* This form is for finding Collective Employee Age of Department *@
+  <form method="get" action="/Get-Collective-Age-Dept">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Get Collective Age Department Employee">
+  </form><br/>
+
+  @* This form is for finding Average Employee Age of Department *@
+  <form method="get" action="/Get-Avarage-Age_Dept">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Get Average Age Department Employee">
+  </form><br/>
+
+  @* This form is for finding Number of Vacancies Available in Department *@
+  <form method="get" action="/Get-Vacancies-Dept">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Get Vacancies In Department">
+  </form><br/>
+
+  @* This form is for checking the Employee Eligible for Accommodate and Promotion in Department *@
+  <form method="get" action="/Get-Accom-Prom-Dept">
+    <label for="dept">Enter Department Number</label><br/>
+    <input type="text" id="dept" name="dept"><br/><br/>
+    <input type="submit" value="Find Eligible Employee Accommodate And Promotion In Department">
+  </form><br/>
+
+  @* This form is for finding Average Employee Age of In-Time-Tec *@
+  <form method="get" action="/Get-Average-Age-InTimeTec">
+    <input type="submit" value="Get Average Age Of In-time-Tec Employee">
+  </form><br/>
+
+  @* This form is for finding Collective Employee Age of In-Time-Tec *@
+  <form method="get" action="/Get-Collective-Age-InTimeTec">
+    <input type="submit" value="Get Collective Age Of In-Time-Tec Employee">
+  </form>
+</div>
+
