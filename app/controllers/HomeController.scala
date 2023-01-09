@@ -79,15 +79,15 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
     }
   }
 
-  def getAccomPromDept(dept:Int) = Action{
+  def getAccommodatePromotionDept(dept:Int) = Action{
     if (dept < 1 || dept > 4) {
       Ok(s"Enter Department Not Available")
     } else {
-      val accomProm = ITTEmployee.getEmployeeAccommodateAndPromotion(dept)
-      if(accomProm.isEmpty){
+      val accommodatePromotion = ITTEmployee.getEmployeeAccommodateAndPromotion(dept)
+      if(accommodatePromotion.isEmpty){
         Ok("In Department No Employee is Eligible for Accommodate and Promotion")
       }else {
-        Ok(views.html.printlistitem(accomProm))
+        Ok(views.html.printlistitem(accommodatePromotion))
       }
     }
   }

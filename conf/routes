@@ -29,7 +29,7 @@ GET     /Get-Avarage-Age_Dept           controllers.HomeController.getDeptAverag
 
 GET     /Get-Vacancies-Dept             controllers.HomeController.getDeptVacancies(dept:Int)
 
-GET     /Get-Accom-Prom-Dept            controllers.HomeController.getAccomPromDept(dept:Int)
+GET     /Get-Accom-Prom-Dept            controllers.HomeController.getAccommodatePromotionDept(dept:Int)
 
 GET     /Get-Average-Age-InTimeTec      controllers.HomeController.getAverageAgeIntimeTecEmployee()
 

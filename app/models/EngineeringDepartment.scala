@@ -8,33 +8,33 @@ case class EngineeringDepartment() extends ITT{
 
   def deptEmpSize():Int = emp.size
 
-  def elder(): List[Any] = {
-    var yo = 0
-    var nam = ""
-    emp.map(x=> {
-      val z=x.getAge
-      if(z>yo){
-        yo=z
-        nam = x.getName
-      }
-    }
-    )
-   List(nam,yo)
-    }
-
-
-  def younger(): List[Any] = {
-    var yo = 200
-    var nam = ""
+  def elderEmployee(): List[Any] = {
+    var minValue = 0
+    var name = ""
     emp.map(x => {
-      val z = x.getAge
-      if (z < yo) {
-        yo = z
-        nam = x.getName
+      val employeeAge = x.getAge
+      if (employeeAge > minValue) {
+        minValue = employeeAge
+        name = x.getName
       }
     }
     )
-   List(nam, yo)
+    List(name, minValue)
+  }
+
+
+  def youngerEmployee(): List[Any] = {
+    var maxValue = 200
+    var name = ""
+    emp.map(x => {
+      val employeeAge = x.getAge
+      if (employeeAge < maxValue) {
+        maxValue = employeeAge
+        name = x.getName
+      }
+    }
+    )
+    List(name, maxValue)
   }
 
   def collectiveAge(): Int = {
@@ -55,12 +55,12 @@ case class EngineeringDepartment() extends ITT{
     avg
   }
 
-  def vacancies(): Int = {
-    var vac = 0
+  def departmentVacancies(): Int = {
+    var vacancy = 0
     if (deptEmpSize() < 6) {
-      vac = 6 - deptEmpSize()
+      vacancy = 6 - deptEmpSize()
     }
-    vac
+    vacancy
   }
 
   def accommodateAndPromotion(): List[String] = {
